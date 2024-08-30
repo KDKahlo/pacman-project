@@ -13,15 +13,15 @@
 }
 
 .pac-dot {
-    background-color: green;
-    border: 5px solid white;
+    background-color: whiteS;
+    border: 5px solid blue;
     box-sizing: border-box;
 }
 .wall {
-    background-color: blue;
+    background-color: black;
 }
 .power-pellet {
-    background-color: greenyellow;
+    background-color: blue;
     border-radius: 10px;
 }
 .blinky {
@@ -37,6 +37,40 @@
 .clyde {
     background-color: orange;
 }
-.pac-man {
-    background-color: yellow;
+.pacman {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #F2D648;
+    position: relative;
+    margin-top: 20px;
+    
+    &__eye {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 20px;
+      right: 40px;
+      background: #333333;
+    }
+    
+    &__mouth {
+      background: #000;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+      animation-name: eat;
+      animation-duration: 0.7s;
+      animation-iteration-count: infinite;
+    }}
+
+
+.scared-ghost {
+    background-color: aquamarine;
+}
+.ghost-lair {
+    background-color: blue;
+    border: solid 5px  blue;
 }
