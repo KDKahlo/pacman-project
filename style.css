@@ -28,7 +28,41 @@
 }
 .blinky {
     background-color: red;
+    border-radius: 50% 50% 0 0;
+  display: inline-block;
+  height: 25px;
+  margin: 5px;
+  position: relative;
+  width: 20px;  
 }
+
+.blinky::before {
+    content: '';
+    position: absolute;
+    background-repeat: repeat-x;
+    bottom: -4px; /* Adjust position to ensure tail looks right */
+    left: 0;
+    width: 20px;
+    height: 10px;
+    background-color: red; /* Same color as the ghost */
+  
+}
+.blinky::after {
+    content: '';
+    position: absolute;
+    background-repeat: repeat-x;
+    bottom: -9px; /* Adjust to make the tail appear as part of the ghost */
+    border-left: 8px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid red; /* Tail color */
+    background:
+    linear-gradient(-45deg, transparent 75%, red 75%) 0 50%,
+    linear-gradient( 45deg, transparent 75%, red 75%) 0 50%;
+    background-size:20px 20px, 20px 20px;
+    
+}
+
+
 .pinky {
     background-color: pink;
 
@@ -39,6 +73,7 @@
 .clyde {
     background-color: orange;
 }
+
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
 *, *:after, *:before {
   
