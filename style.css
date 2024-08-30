@@ -1,3 +1,5 @@
+
+
 .grid {
     width: 560px;
     height: 560px;
@@ -37,34 +39,45 @@
 .clyde {
     background-color: orange;
 }
-.pacman {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #F2D648;
-    position: relative;
-    margin-top: 20px;
-    
-    &__eye {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      top: 20px;
-      right: 40px;
-      background: #333333;
-    }
-    
-    &__mouth {
-      background: #000;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
-      animation-name: eat;
-      animation-duration: 0.7s;
-      animation-iteration-count: infinite;
-    }}
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+*, *:after, *:before {
+  
+
+
+    .pac-man {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #F2D648;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .pac-man::before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #333333; /* Eye color */
+        top: 3px; /* Adjust as needed */
+        right: 10px; /* Adjust as needed */
+      }
+      
+      .pac-man::after {
+        content: '';
+        position: absolute;
+        width: 88%;
+        height: 95%;
+        background: #000; /* Mouth color */
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%); /* Mouth shape */
+        top: 2.5%; /* Adjust to position the mouth */
+        left: 6%; /* Adjust to center the mouth */
+        animation-name: eat;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+      }
+    }      
 
 
 .scared-ghost {
@@ -74,3 +87,20 @@
     background-color: blue;
     border: solid 5px  blue;
 }
+@keyframes eat {
+    0% {
+      clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+    25% {
+      clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+    50% {
+      clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+    75% {
+      clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+    100% {
+      clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+  }

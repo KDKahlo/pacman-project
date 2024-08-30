@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //create Characters
     //draw pac-man onto the board
     let pacmanCurrentIndex = 490
-    squares[pacmanCurrentIndex].classList.add('pac-man')
+    squares[pacmanCurrentIndex].classList.add('pac-man');
+
 
 
 
