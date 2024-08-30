@@ -119,8 +119,8 @@
     background-color: aquamarine;
 }
 .ghost-lair {
-    background-color: blue;
-    border: solid 5px  blue;
+    background-color: rgb(42, 42, 240);
+    border: solid 5px  rgb(42, 42, 240);
 }
 @keyframes eat {
     0% {
